@@ -1,0 +1,32 @@
+body {
+    background: rgb(68, 136, 238);
+    font: normal 15pt Arial;
+    
+}
+
+header {
+    color: white;
+    text-align: center; /*Texto no meio*/
+
+}
+
+section {
+    background:white;
+    border-radius: 10px; /*Deixa as bordas arredondadas*/
+    padding: 15px; /*Da espaço */
+    width: 500px; /*Largura*/
+    margin: auto; /*Foi para o centro fda tela*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.438); /*Coloca uma sombra em volta. 1 dislocamento lateral, 2 dislocamento vertical, 3 espalhamento preto cor*/
+
+}
+
+div {
+    text-align: center;
+    padding: 8px;
+}
+
+footer {
+    color: white;
+    text-align: center; /*Texto no meio*/ 
+    font-style: italic; /*Deixou o texto em italico*/
+}

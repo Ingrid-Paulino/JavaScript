@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> <!--configurações de caracteres, pra podermos usar acentuações-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa</title>
+    <style>
+        body {
+            background-color: rgb(152, 152, 219);
+            color: white;
+            font: normal 25pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <p>Já me livrei da maldição!</p>
+    <script>
+        var n1 = Number.parseInt(window.prompt('Digite um numero: ')) //esse codigo fez o prompt converteer para numero
+        var n2 = Number.parseInt(window.prompt('Digite outro numero: ')) //Não é obrigado escrever number e window
+        var s = n1 + n2 
+        alert('A soma dos valores é ' + s) //number 
+        // + pode ser adição - (number + number) para adição
+        // + pode ser contatenação - (string + string) para contatenação
+        var n1 = parseFloat(prompt('Digite um numero: ')) //esse codigo fez o prompt converteer para numero
+        var n2 = parseFloat(prompt('Digite outro numero: ')) //Não é obrigado escrever number e window
+        var s = n1 + n2 
+        alert('A soma dos valores é ' + s)
+
+        var n1 = Number(prompt('Digite um numero: ')) //esse codigo fez o prompt converteer para numero
+        var n2 = Number(prompt('Digite outro numero: ')) //Não é obrigado escrever number e window
+        var s = n1 + n2 
+        alert('A soma dos valores é ' + s)
+    </script>
+</body>
+</html>

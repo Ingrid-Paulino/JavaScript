@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+
+    <style>
+        body {
+           background: rgb(73, 125, 236);
+           color: white; /*Color of word*/
+           font: normal 18px Arial; 
+        }
+    </style>
+
+
+</head>
+<body>
+       
+    <h1>Iniciando estudos cpm Dom</h1>
+    <p>Aqui vai o resultado </p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaSript</p>
+    <div id="msg">Clique em mim</div><!--usando o ID-->
+    <div id="teste2">Clica em mim 2</div>
+    <div name="teste3">clica em mim 3</div> <!--usando por nome-->
+    <div id="teste4">Eu tenho 10 anos</div>
+
+    <script>
+
+                  /*Podemos fazer isso por marca, ID, Nome, classe e Por seletor. Existe outros */
+
+        var p1 = window.document.getElementsByTagName('p')[0] /*Esse seletor é por marca, usamos o elemento (p (paragrafo)) porem tem dois (p) entao usamos
+                                                                [] (colchetes) com o numero do seletor que queremos. O 0 sempre é o primeiro, se eu quiser 
+                                                                o paragrafo dois, é so colocar dentro do colchete o numero 1 e assim por diante. 
+                                                              */
+            window.document.writeln('Esta escrito na tela: ' +  p1.innerText ) /*(Write) é um comando que escreve na tela, (p1.inerText) é o 
+                                                                              inerText pegando o p1 (primeito paragrafo) e reescrevendo na tela.
+                                                                              */
+                p1.style.color = 'blue' /*Mudei a cor do paragrafo 1*/
+        var corpo = window.document.body
+            corpo.style.background = 'pink' /*Nesse comando troquei a cor de fundo que erra azul para rosa*/
+     
+        var p2 = window.document.getElementsByTagName('p')[1]
+            alert( p2.innerHTML)
+
+        /*
+         innerText - tira qualque mudança do texto (pega sem as filhas sem a formatação)
+         innerHTML - Escreve o texto da forma exata que ele esta escrito, com todos os elementos, que sao as filhas.
+        */
+       var d = window.document.getElementById('msg') //ID la de cima
+       d.style.background = 'green '// Mudei a cor se fundo
+
+       document.getElementById('teste2').innerText = 'Olá!' //Podemos fazer de forma direta tambem, porem dessa forma o comando fica muito grande, entt podemos simplificar com variaveis como nos exemplos a cima
+                                                            //Nesse caso trocamos o texto do html por (Olá)
+
+      document.getElementsByName('teste3')[0].innerText = 'Meu nome é ingrid' //usando por nome, lembrando de usar [] sempre que o seletor for no plural
+         
+      //USANDO POR SELETOR, ELE É UM METODO MAIS RECENTE
+    var f = window.document.querySelector('div#teste4') //qundo usar ID colocamos # e quando usamos CLASS colocamos .  (ponto)
+      f.style.color ='black'                            // Usamos query... quando queremos fazer auteraçoes mais rapidas
+
+    var g = document.querySelectorAll('div')[3] 
+     g.style.background = 'blue'
+
+
+
+
+
+    </script>
+
+</body>
+</html>

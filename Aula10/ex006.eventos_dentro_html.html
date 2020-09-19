@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area {
+            font: normal 20px Arial;
+            background: rgb(8, 151, 8);
+            color: white;
+            width: 200px; /*largura*/
+            height: 200px; /*Altura*/
+            line-height: 200px; /*Levou o texto para o meio*/
+            text-align: center; /*Levou o texto para o centro*/
+        }
+    </style>
+</head>
+<body>
+     <!--le assim : quando eu clicar em cima da div, ele vai disparar o clicar. a mesma coisa com o entrar e assim por diante-->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        interaja...
+
+    </div>
+<script>
+    //é mais interesante deixar essa variavel aqui fora do que dentro das functions
+    //Essa var esta de forma global, diferente se ela estivesse dentro das functions
+    var a = document.getElementById('area')
+
+    //lé assim: quando eu chamar o clicar- (tudo dentro do bloco vai executar)
+    function clicar(){
+        //var a = document.getElementById('area') //Não é interesante deixar esse a da variavel dentro da function, entt por esse motivo vamos levar ela para fora, assim poderei usar mara varia functions com a mesma var
+        a.innerText = 'Clicou!'
+        a.style.background = 'red'
+    }
+    //é importante colocar na açao o nome do que ela vai fazer, isso deixa mais claro o codigo
+    function entrar(){
+       // var a = document.getElementById('area') //Não é interesante deixar esse a da variavel dentro da function, entt por esse motivo vamos levar ela para fora, assim poderei usar mara varia functions com a mesma var
+      a.innerText = 'Entrou!'
+    }
+    function sair(){
+        a.innerText = 'Saiu!'
+        a.style.background = 'green'
+    }
+</script>
+
+</body>
+</html>
