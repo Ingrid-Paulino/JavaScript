@@ -3,7 +3,7 @@ function carregar () {
    var img = document.getElementById('imagem') 
    var data = new Date()
    //var hora = data.getHours() //pega a hr atual
-   var hora = 7 //pega a hr que eu colocar vai mudando as fts dependendo da hr
+   var hora = 15//pega a hr que eu colocar vai mudando as fts dependendo da hr
    msg.innerHTML = `Agora são ${hora} horas.`
    if (hora >= 00 && hora < 12){
    //BOM DIA!
